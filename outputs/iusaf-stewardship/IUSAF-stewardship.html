@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stewardship edition · Inverted UN Scale of Assessments Formula (IUSAF)</title><meta name="description" content="Explore six-band IUSAF equity allocations across 142 Parties."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%230c7180' d='M0 0h11v10h11v10h10v12H0z'/%3E%3C/svg%3E"><style>:root{font-family:Inter,Arial,sans-serif;color:#193445;background:#edf2f5;font-synthesis:none;--strict:#087586;--equal:#a46500;--violation:#c23c53}*{box-sizing:border-box}body{margin:0}main{max-width:1500px;margin:auto;padding:32px 4vw}header{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:28px}.eyebrow{font-size:12px;letter-spacing:.18em;font-weight:700;color:#087586}h1{font-size:38px;letter-spacing:-.04em;margin:8px 0}p{line-height:1.5;margin:8px 0;color:#526775}h2{font-size:18px;margin:0}button{font:inherit;padding:12px 16px;border:1px solid #b8c9d2;border-radius:7px;background:white;color:#193445;cursor:pointer}button:hover{background:#e5f2f4}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #138bcb;outline-offset:4px}.summary{display:grid;grid-template-columns:1fr 1fr 1fr 1.4fr;background:#17394a;color:white;border-radius:10px;padding:24px 28px;gap:24px}.summary span{font-size:13px;color:#c6dce7;display:block;margin-bottom:8px}.summary strong{font-size:28px;font-weight:500;white-space:nowrap}.summary div:last-child strong{font-size:22px}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;margin:28px 0}.visual,aside,.details{background:white;border-radius:10px;padding:24px}.chart-heading,.control-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:22px}.chart-heading span{font-size:13px;color:#526775}#chart{height:320px;width:100%}#chart svg{display:block;overflow:visible}.legend{display:flex;justify-content:center;gap:24px;font-size:14px;margin:18px 0}.strict{color:var(--strict)}.equal{color:var(--equal)}.violation{color:var(--violation)}.comparisons{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.comparison{text-align:center;font-size:13px;background:#f0f6f8;padding:10px 3px;border-radius:5px}.comparison.equal{background:#fff3d7}.comparison.violation{background:#ffeaf0}.comparison b{display:block;font-size:16px;margin-bottom:4px}.control-heading span{font-size:12px;background:#e6f3f4;color:#087586;padding:5px 8px;border-radius:4px}label{font-size:14px;display:block}output{float:right;font-weight:700}input[type=range]{width:100%;margin:18px 0 8px;accent-color:#087586}.range-labels{display:flex;justify-content:space-between;font-size:12px;color:#526775}.hint{font-size:14px;margin:20px 0}.weight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 10px}.weight-grid input{width:100%;font:inherit;font-variant-numeric:tabular-nums;margin-top:6px;padding:10px 8px;border:1px solid #b8c9d2;border-radius:5px}.weight-grid input[aria-invalid=true]{border:2px solid #c23c53}#error{font-size:13px;color:#a9273e;min-height:20px}.primary{width:100%;background:#087586;color:white;border:0}.primary:hover{background:#075d6a}.scope{font-size:13px;margin-top:20px}.scope span{color:#526775}.details{margin-top:16px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}th,td{text-align:right;padding:11px 14px;border-bottom:1px solid #e0e8ed}th:first-child,td:first-child{text-align:left}thead{color:#526775}tfoot{font-weight:700}details{margin:24px 0;font-size:14px;max-width:950px}summary{cursor:pointer;font-weight:600}details p{margin-top:14px}footer{display:flex;justify-content:space-between;font-size:12px;color:#526775;border-top:1px solid #cedbe2;padding-top:18px}body:fullscreen{overflow:auto}.invalid .visual,.invalid .details{opacity:.5}@media(min-width:1500px){#chart{height:380px}}@media(max-width:1000px){.workspace{grid-template-columns:minmax(0,1fr)}.weight-grid{grid-template-columns:repeat(6,1fr)}.summary{grid-template-columns:1fr 1fr}}@media(max-width:600px){main{padding:20px 14px}header{align-items:flex-start}h1{font-size:28px}header button{font-size:12px;padding:9px}.summary{padding:20px;gap:20px}.summary strong{font-size:24px}.summary div:last-child strong{font-size:18px;white-space:normal}.visual,aside,.details{padding:16px}.chart-heading{display:block}.chart-heading span{display:block;margin-top:6px}#chart{height:280px}.comparisons{gap:3px}.comparison{font-size:11px}.comparison b{font-size:13px}.legend{font-size:12px;gap:12px}.weight-grid{grid-template-columns:repeat(3,1fr)}footer{display:block}footer span{display:block;margin-top:8px}th,td{padding:10px 7px}table{font-size:12px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+.band-countries{margin:0;max-width:420px;font-size:14px}.band-countries summary{font-weight:600}.band-countries div{font-weight:400;line-height:1.7;white-space:normal;padding:12px 0;color:#526775}.country-lookup{border-top:1px solid #dfe8ed;margin-top:26px;padding-top:24px}.country-lookup>p{font-size:14px}.country-lookup input{display:block;width:min(100%,440px);font:inherit;padding:12px;border:1px solid #b8c9d2;border-radius:5px;margin-top:8px}.country-results{max-height:380px;overflow:auto}.country-results thead{position:sticky;top:0;background:white}.country-code{color:#526775;font-weight:400;font-size:12px;margin-left:8px}.country-note{max-width:900px}.country-results th:first-child{width:55%}
+
+.band-country-list{list-style:none;margin:10px 0 0;padding:0;font-weight:400;color:#526775;white-space:normal}.band-country-list li{display:block;padding:7px 0;line-height:1.4;border-bottom:1px solid #e0e8ed}.band-country-list li:last-child{border-bottom:0}
+
+.band-toggle{padding:4px 0;text-align:left;border:0;background:transparent;font-weight:600;font-size:14px}.band-total{background:#f0f6f8}.country-detail th{padding-left:24px;font-weight:400}.country-detail td{color:#526775}.country-detail[hidden]{display:none}.rounding-note{font-size:13px;max-width:900px;margin-top:14px}
+
+.ratio-entry{margin-top:18px}.ratio-entry>div{display:flex;align-items:center;gap:9px;margin:7px 0}.ratio-entry input{width:110px;font:inherit;padding:9px;border:1px solid #b8c9d2;border-radius:5px}.ratio-entry>span{font-size:12px;color:#526775}#ratio-error{font-size:13px;color:#a9273e}#ratio-input[aria-invalid=true]{border-color:#a9273e}
+
+.summary label{display:block;color:#526775;font-size:13px;margin-bottom:8px}.summary select{font:inherit;font-size:24px;font-weight:600;color:#193445;background:white;border:1px solid #b4c9d1;border-radius:8px;padding:6px 10px;max-width:100%;cursor:pointer}.summary select:focus-visible{outline:3px solid #147D92;outline-offset:3px}
+
+.stewardship select{font:inherit;padding:12px;border:1px solid #aac2cc;border-radius:8px;max-width:100%;margin:12px 14px 12px 0}.stewardship label{display:block}.stewardship p{line-height:1.6}.component-legend{display:flex;gap:24px;flex-wrap:wrap}.component-legend span:nth-child(1){color:#147D92}.component-legend span:nth-child(2){color:#8761a8}.component-legend span:nth-child(3){color:#a77923}#combined-chart svg{width:100%;height:auto}.check-warning{color:#b3354b}#pool-summary{font-size:20px;font-weight:600}#combined-search{font:inherit;padding:10px;width:min(100%,400px)}
+</style></head>
+<body><main>
+<header><div><div class="eyebrow">IUSAF / STEWARDSHIP EXPLORER</div><h1>Inverted UN Scale of Assessments Formula (IUSAF)</h1><p>Choose a fund size. Compare equity and stewardship. Explore the allocation to each Party.</p></div><button id="fullscreen">Present full screen</button></header>
+<section class="summary" aria-label="Model summary"><div><label for="fund">Illustrative fund (USD)</label><select id="fund"><option value="50000000">$50 million</option><option value="200000000">$200 million</option><option value="500000000">$500 million</option><option value="1000000000" selected>$1 billion</option></select></div><div><span>Participating Parties</span><strong>142</strong></div><div><span>Pure equity · Band 1 : Band 6</span><strong id="ratio">3.75 : 1</strong></div><div><span>Pure equity · adjacent steps</span><strong id="status" aria-live="polite">Strictly decreasing</strong></div></section>
+<section class="details stewardship"><h2>Recognising ocean and terrestrial stewardship</h2><label for="scenario">Allocation scenario</label><select id="scenario"><option value="pure">Pure IUSAF reference · no stewardship</option><option value="ocean">SOSAC only · 3% SOSAC / 0% TSAC</option><option value="strict" selected>Strict preset · 3% SOSAC / 1.5% TSAC</option><option value="gini">Gini minimum preset · 3% SOSAC / 2.5% TSAC</option><option value="boundary">Band boundary preset · 3% SOSAC / 3% TSAC</option></select><button id="stewardship-reset">Reset weights and stewardship defaults</button><p id="pool-summary" aria-live="polite"></p><p>SOSAC: Small Island Developing States Ocean Stewardship Allocation Component (recognises greater ocean stewardship responsibilities and structural constraints of UN recognised SIDS).</p><p>TSAC: Terrestrial Stewardship Allocation Component (recognises greater stewardship responsibilities associated with size, not species richness).</p><p class="hint">The components divide the selected fund; they are not added on top. SOSAC is shared equally among 39 SIDS. TSAC follows each Party’s share of eligible land area.</p><p id="preset-note"></p></section><section class="workspace"><div class="visual"><div class="chart-heading"><h2>Pure equity reference per Party</h2><span>USD millions · equal-width bands</span></div><div id="chart" role="img" aria-label="Six-band allocation staircase"></div><div class="legend"><span class="strict">↓ Strict decrease</span><span class="equal">= Equality</span><span class="violation">↑ Violation</span></div><div id="comparisons" class="comparisons" aria-label="Adjacent-band checks"></div></div>
+<aside><div class="control-heading"><h2>Shape the scale</h2><span id="mode">Paper baseline</span></div><label for="steepness">Steepness <output id="target">3.75 : 1</output></label><input id="steepness" type="range" min="1" max="10" step=".01" value="3.75"><div class="range-labels"><span>Flat · 1 : 1</span><span>10 : 1</span></div><div class="ratio-entry"><label for="ratio-input">Or enter a ratio</label><div><input id="ratio-input" type="number" min="1" max="10" step="0.01" value="3.75" aria-describedby="ratio-help ratio-error"><span>: 1</span></div><span id="ratio-help">Band 1 to Band 6 · 1 to 10</span><p id="ratio-error" role="alert"></p></div><p class="hint">Paper baseline: Table 1, weights 1.50, 1.30, 1.10, 0.95, 0.75, 0.40. Slider and typed ratios explore alternative weights; band membership stays fixed.</p><div class="weight-grid" id="weights"></div><p id="error" role="alert"></p><button id="reset" class="primary">Reset to paper baseline · 3.75 : 1</button><p class="scope">Pure equity reference above<br><span>Combined allocations appear below.</span></p></aside></section>
+<section class="details stewardship"><h2>Combined allocations</h2><p>Band averages are shown below. Countries in the same band can receive different totals.</p><div id="combined-chart" role="img" aria-label="Mean combined allocations by band"></div><p class="component-legend"><span>■ IUSAF equity</span><span>■ SOSAC</span><span>■ TSAC</span></p><p id="mean-order" aria-live="polite"></p><p id="country-order"></p><div class="table-wrap"><table><thead><tr><th>Band</th><th>Parties</th><th>Mean per Party</th><th>Country range</th><th>Band total</th></tr></thead><tbody id="combined-bands"></tbody></table></div><h2>Country allocations with stewardship</h2><label for="combined-search">Country name or three-letter code</label><input id="combined-search" type="search" placeholder="For example, Kenya or KEN"><p id="combined-count"></p><div class="country-results table-wrap"><table><thead><tr><th>Country</th><th>Band</th><th>IUSAF</th><th>SOSAC</th><th>TSAC</th><th>Combined</th><th>Change from pure equity</th></tr></thead><tbody id="combined-countries"></tbody></table></div><p id="combined-total"></p></section><section class="details"><div class="chart-heading"><h2>Pure equity reference detail</h2><span>All values in USD</span></div><div class="table-wrap"><table><thead><tr><th>Band / countries</th><th>Parties</th><th>Weight</th><th>Per Party</th><th>Total allocation</th></tr></thead><tbody id="rows"></tbody><tfoot><tr><th>Total</th><td>142</td><td>—</td><td>—</td><td id="fund-total">$1,000,000,000</td></tr></tfoot></table></div>
+<p class="rounding-note">Each country counts as 1 Party. Total allocation = Party count × allocation per Party. Band rows summarise their countries; the grand total counts each Party once. Amounts are rounded to whole dollars, so displayed country amounts may sum slightly differently from the band total.</p><div class="country-lookup"><h2>Find a country’s pure equity reference</h2><p>Each listed Party receives its band’s per-Party amount under the current weights.</p><label for="country-search">Country name or three-letter code</label><input id="country-search" type="search" placeholder="For example, Kenya or KEN" autocomplete="off"><p id="country-count" role="status"></p><div class="country-results table-wrap"><table><thead><tr><th>Country / Party</th><th>Band</th><th>Allocation per Party (USD)</th></tr></thead><tbody id="country-rows"></tbody></table></div><p class="country-note">Membership: version 3 model snapshot, 142 Parties. High-income Parties are excluded except eligible SIDS. A country absent from this list is outside this scenario; absence does not mean a calculated allocation of zero.</p></div></section>
+<details><summary>Calculation & assumptions</summary><p>Allocation per Party = fund × band weight ÷ sum of (Party count × weight). Counts: 31, 59, 30, 18, 3, 1. Every Party in a band receives the same allocation. Band totals are the per-Party allocation multiplied by that band’s membership.</p><p>The baseline matches Table 1 in iusaf_paper-07052026.docx. The slider interpolation is an exploratory rule introduced for this application, not a formula specified in the paper. The slider uses wᵢ(r) = 0.4 × (baseline wᵢ / 0.4)<sup>ln(r) / ln(3.75)</sup>. This preserves the baseline shape and makes the endpoint ratio exactly r. At 1:1 all weights are 0.4; at 3.75:1 they match the supplied baseline. Moving the slider replaces manual edits.</p><p>Strict monotonicity means A₁ &gt; A₂ &gt; A₃ &gt; A₄ &gt; A₅ &gt; A₆. Amber marks an equal adjacent pair; red marks a rising pair. Checks use unrounded weights, so displayed rounded amounts can look equal even when a small difference exists. Whole-dollar displays may differ slightly from the fund when summed due to rounding.</p><p>Inputs are taken from the supplied request. The referenced Table 1 PDF was not accessible in this workspace and has not been independently verified.</p></details><footer>IUSAF • Policy scenario explorer <span>Stewardship edition / components share one fund</span></footer>
+</main><script>/* Pure equity model: no DOM, no SOSAC or TSAC allocation. */
+(function(root){
+'use strict';
+const counts=Object.freeze([31,59,30,18,3,1]);
+const baseline=Object.freeze([1.5,1.3,1.1,.95,.75,.4]);
+function weightsForRatio(ratio){
+ if(!Number.isFinite(ratio)||ratio<1||ratio>10) throw Error('Ratio must be between 1 and 10.');
+ if(ratio===3.75)return [...baseline];
+ const power=Math.log(ratio)/Math.log(3.75);
+ return baseline.map(w=>.4*Math.pow(w/.4,power));
+}
+function allocateEquity(weights,fund=1e9,parties=counts){
+ if(weights.length!==6||parties.length!==6||!weights.every(w=>Number.isFinite(w)&&w>=0)||!Number.isFinite(fund)||fund<0||!parties.every(n=>Number.isInteger(n)&&n>0))throw Error('Use six non-negative finite weights and positive Party counts.');
+ const denominator=weights.reduce((sum,w,i)=>sum+w*parties[i],0);
+ if(!Number.isFinite(denominator)||denominator<=0)throw Error('At least one weight must be greater than zero.');
+ const perParty=weights.map(w=>fund*(w/denominator));
+ const totals=perParty.map((a,i)=>a*parties[i]);
+ const comparisons=weights.slice(0,-1).map((w,i)=>w===weights[i+1]?'equal':w>weights[i+1]?'strict':'violation');
+ return {perParty,totals,denominator,comparisons,ratio:weights[5]===0?(weights[0]===0?NaN:Infinity):weights[0]/weights[5],status:comparisons.includes('violation')?'violation':comparisons.includes('equal')?'equal':'strict'};
+}
+const api={counts,baseline,weightsForRatio,allocateEquity};
+if(typeof module!=='undefined')module.exports=api;else root.IUSAF=api;
+})(typeof window!=='undefined'?window:globalThis);
+</script><script>/* Version 3 country membership snapshot. See COUNTRY-SOURCE.md. */
+const IUSAFCountries = [
+  {
+    "name": "Afghanistan",
+    "code": "AFG",
+    "band": 2
+  },
+  {
+    "name": "Albania",
+    "code": "ALB",
+    "band": 2
+  },
+  {
+    "name": "Algeria",
+    "code": "DZA",
+    "band": 3
+  },
+  {
+    "name": "Angola",
+    "code": "AGO",
+    "band": 2
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "code": "ATG",
+    "band": 2
+  },
+  {
+    "name": "Argentina",
+    "code": "ARG",
+    "band": 4
+  },
+  {
+    "name": "Armenia",
+    "code": "ARM",
+    "band": 2
+  },
+  {
+    "name": "Azerbaijan",
+    "code": "AZE",
+    "band": 3
+  },
+  {
+    "name": "Bahamas",
+    "code": "BHS",
+    "band": 3
+  },
+  {
+    "name": "Bangladesh",
+    "code": "BGD",
+    "band": 2
+  },
+  {
+    "name": "Barbados",
+    "code": "BRB",
+    "band": 2
+  },
+  {
+    "name": "Belarus",
+    "code": "BLR",
+    "band": 3
+  },
+  {
+    "name": "Belize",
+    "code": "BLZ",
+    "band": 1
+  },
+  {
+    "name": "Benin",
+    "code": "BEN",
+    "band": 2
+  },
+  {
+    "name": "Bhutan",
+    "code": "BTN",
+    "band": 1
+  },
+  {
+    "name": "Bolivia (Plurinational State of)",
+    "code": "BOL",
+    "band": 3
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "code": "BIH",
+    "band": 3
+  },
+  {
+    "name": "Botswana",
+    "code": "BWA",
+    "band": 3
+  },
+  {
+    "name": "Brazil",
+    "code": "BRA",
+    "band": 5
+  },
+  {
+    "name": "Burkina Faso",
+    "code": "BFA",
+    "band": 2
+  },
+  {
+    "name": "Burundi",
+    "code": "BDI",
+    "band": 1
+  },
+  {
+    "name": "Cabo Verde",
+    "code": "CPV",
+    "band": 1
+  },
+  {
+    "name": "Cambodia",
+    "code": "KHM",
+    "band": 2
+  },
+  {
+    "name": "Cameroon",
+    "code": "CMR",
+    "band": 3
+  },
+  {
+    "name": "Central African Republic",
+    "code": "CAF",
+    "band": 1
+  },
+  {
+    "name": "Chad",
+    "code": "TCD",
+    "band": 2
+  },
+  {
+    "name": "China",
+    "code": "CHN",
+    "band": 6
+  },
+  {
+    "name": "Colombia",
+    "code": "COL",
+    "band": 4
+  },
+  {
+    "name": "Comoros",
+    "code": "COM",
+    "band": 1
+  },
+  {
+    "name": "Congo",
+    "code": "COG",
+    "band": 2
+  },
+  {
+    "name": "Cook Islands",
+    "code": "COK",
+    "band": 1
+  },
+  {
+    "name": "Cuba",
+    "code": "CUB",
+    "band": 4
+  },
+  {
+    "name": "Côte d’Ivoire",
+    "code": "CIV",
+    "band": 3
+  },
+  {
+    "name": "Democratic People's Republic of Korea",
+    "code": "PRK",
+    "band": 2
+  },
+  {
+    "name": "Democratic Republic of the Congo",
+    "code": "COD",
+    "band": 2
+  },
+  {
+    "name": "Djibouti",
+    "code": "DJI",
+    "band": 2
+  },
+  {
+    "name": "Dominica",
+    "code": "DMA",
+    "band": 1
+  },
+  {
+    "name": "Dominican Republic",
+    "code": "DOM",
+    "band": 3
+  },
+  {
+    "name": "Ecuador",
+    "code": "ECU",
+    "band": 3
+  },
+  {
+    "name": "Egypt",
+    "code": "EGY",
+    "band": 4
+  },
+  {
+    "name": "El Salvador",
+    "code": "SLV",
+    "band": 3
+  },
+  {
+    "name": "Equatorial Guinea",
+    "code": "GNQ",
+    "band": 2
+  },
+  {
+    "name": "Eritrea",
+    "code": "ERI",
+    "band": 1
+  },
+  {
+    "name": "Eswatini",
+    "code": "SWZ",
+    "band": 2
+  },
+  {
+    "name": "Ethiopia",
+    "code": "ETH",
+    "band": 2
+  },
+  {
+    "name": "Fiji",
+    "code": "FJI",
+    "band": 2
+  },
+  {
+    "name": "Gabon",
+    "code": "GAB",
+    "band": 3
+  },
+  {
+    "name": "Gambia",
+    "code": "GMB",
+    "band": 1
+  },
+  {
+    "name": "Georgia",
+    "code": "GEO",
+    "band": 2
+  },
+  {
+    "name": "Ghana",
+    "code": "GHA",
+    "band": 3
+  },
+  {
+    "name": "Grenada",
+    "code": "GRD",
+    "band": 1
+  },
+  {
+    "name": "Guatemala",
+    "code": "GTM",
+    "band": 3
+  },
+  {
+    "name": "Guinea",
+    "code": "GIN",
+    "band": 2
+  },
+  {
+    "name": "Guinea-Bissau",
+    "code": "GNB",
+    "band": 1
+  },
+  {
+    "name": "Guyana",
+    "code": "GUY",
+    "band": 3
+  },
+  {
+    "name": "Haiti",
+    "code": "HTI",
+    "band": 2
+  },
+  {
+    "name": "Honduras",
+    "code": "HND",
+    "band": 2
+  },
+  {
+    "name": "India",
+    "code": "IND",
+    "band": 5
+  },
+  {
+    "name": "Indonesia",
+    "code": "IDN",
+    "band": 4
+  },
+  {
+    "name": "Iran (Islamic Republic of)",
+    "code": "IRN",
+    "band": 4
+  },
+  {
+    "name": "Iraq",
+    "code": "IRQ",
+    "band": 4
+  },
+  {
+    "name": "Jamaica",
+    "code": "JAM",
+    "band": 2
+  },
+  {
+    "name": "Jordan",
+    "code": "JOR",
+    "band": 3
+  },
+  {
+    "name": "Kazakhstan",
+    "code": "KAZ",
+    "band": 4
+  },
+  {
+    "name": "Kenya",
+    "code": "KEN",
+    "band": 3
+  },
+  {
+    "name": "Kiribati",
+    "code": "KIR",
+    "band": 1
+  },
+  {
+    "name": "Kyrgyzstan",
+    "code": "KGZ",
+    "band": 2
+  },
+  {
+    "name": "Lao People's Democratic Republic",
+    "code": "LAO",
+    "band": 2
+  },
+  {
+    "name": "Lebanon",
+    "code": "LBN",
+    "band": 3
+  },
+  {
+    "name": "Lesotho",
+    "code": "LSO",
+    "band": 1
+  },
+  {
+    "name": "Liberia",
+    "code": "LBR",
+    "band": 1
+  },
+  {
+    "name": "Libya",
+    "code": "LBY",
+    "band": 3
+  },
+  {
+    "name": "Madagascar",
+    "code": "MDG",
+    "band": 2
+  },
+  {
+    "name": "Malawi",
+    "code": "MWI",
+    "band": 2
+  },
+  {
+    "name": "Malaysia",
+    "code": "MYS",
+    "band": 4
+  },
+  {
+    "name": "Maldives",
+    "code": "MDV",
+    "band": 2
+  },
+  {
+    "name": "Mali",
+    "code": "MLI",
+    "band": 2
+  },
+  {
+    "name": "Marshall Islands",
+    "code": "MHL",
+    "band": 1
+  },
+  {
+    "name": "Mauritania",
+    "code": "MRT",
+    "band": 2
+  },
+  {
+    "name": "Mauritius",
+    "code": "MUS",
+    "band": 2
+  },
+  {
+    "name": "Mexico",
+    "code": "MEX",
+    "band": 5
+  },
+  {
+    "name": "Micronesia (Federated States of)",
+    "code": "FSM",
+    "band": 1
+  },
+  {
+    "name": "Mongolia",
+    "code": "MNG",
+    "band": 2
+  },
+  {
+    "name": "Montenegro",
+    "code": "MNE",
+    "band": 2
+  },
+  {
+    "name": "Morocco",
+    "code": "MAR",
+    "band": 3
+  },
+  {
+    "name": "Mozambique",
+    "code": "MOZ",
+    "band": 2
+  },
+  {
+    "name": "Myanmar",
+    "code": "MMR",
+    "band": 2
+  },
+  {
+    "name": "Namibia",
+    "code": "NAM",
+    "band": 2
+  },
+  {
+    "name": "Nauru",
+    "code": "NRU",
+    "band": 1
+  },
+  {
+    "name": "Nepal",
+    "code": "NPL",
+    "band": 2
+  },
+  {
+    "name": "Nicaragua",
+    "code": "NIC",
+    "band": 2
+  },
+  {
+    "name": "Niger",
+    "code": "NER",
+    "band": 2
+  },
+  {
+    "name": "Nigeria",
+    "code": "NGA",
+    "band": 4
+  },
+  {
+    "name": "Niue",
+    "code": "NIU",
+    "band": 1
+  },
+  {
+    "name": "North Macedonia",
+    "code": "MKD",
+    "band": 2
+  },
+  {
+    "name": "Pakistan",
+    "code": "PAK",
+    "band": 4
+  },
+  {
+    "name": "Palau",
+    "code": "PLW",
+    "band": 1
+  },
+  {
+    "name": "Papua New Guinea",
+    "code": "PNG",
+    "band": 2
+  },
+  {
+    "name": "Paraguay",
+    "code": "PRY",
+    "band": 3
+  },
+  {
+    "name": "Peru",
+    "code": "PER",
+    "band": 4
+  },
+  {
+    "name": "Philippines",
+    "code": "PHL",
+    "band": 4
+  },
+  {
+    "name": "Republic of Moldova",
+    "code": "MDA",
+    "band": 2
+  },
+  {
+    "name": "Rwanda",
+    "code": "RWA",
+    "band": 2
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "code": "KNA",
+    "band": 1
+  },
+  {
+    "name": "Saint Lucia",
+    "code": "LCA",
+    "band": 2
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "code": "VCT",
+    "band": 1
+  },
+  {
+    "name": "Samoa",
+    "code": "WSM",
+    "band": 1
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "code": "STP",
+    "band": 1
+  },
+  {
+    "name": "Senegal",
+    "code": "SEN",
+    "band": 2
+  },
+  {
+    "name": "Serbia",
+    "code": "SRB",
+    "band": 3
+  },
+  {
+    "name": "Seychelles",
+    "code": "SYC",
+    "band": 2
+  },
+  {
+    "name": "Sierra Leone",
+    "code": "SLE",
+    "band": 1
+  },
+  {
+    "name": "Singapore",
+    "code": "SGP",
+    "band": 4
+  },
+  {
+    "name": "Solomon Islands",
+    "code": "SLB",
+    "band": 1
+  },
+  {
+    "name": "Somalia",
+    "code": "SOM",
+    "band": 2
+  },
+  {
+    "name": "South Africa",
+    "code": "ZAF",
+    "band": 4
+  },
+  {
+    "name": "South Sudan",
+    "code": "SSD",
+    "band": 2
+  },
+  {
+    "name": "Sri Lanka",
+    "code": "LKA",
+    "band": 3
+  },
+  {
+    "name": "State of Palestine",
+    "code": "PSE",
+    "band": 1
+  },
+  {
+    "name": "Sudan",
+    "code": "SDN",
+    "band": 2
+  },
+  {
+    "name": "Suriname",
+    "code": "SUR",
+    "band": 2
+  },
+  {
+    "name": "Syrian Arab Republic",
+    "code": "SYR",
+    "band": 2
+  },
+  {
+    "name": "Tajikistan",
+    "code": "TJK",
+    "band": 2
+  },
+  {
+    "name": "Thailand",
+    "code": "THA",
+    "band": 4
+  },
+  {
+    "name": "Timor-Leste",
+    "code": "TLS",
+    "band": 1
+  },
+  {
+    "name": "Togo",
+    "code": "TGO",
+    "band": 2
+  },
+  {
+    "name": "Tonga",
+    "code": "TON",
+    "band": 1
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "code": "TTO",
+    "band": 3
+  },
+  {
+    "name": "Tunisia",
+    "code": "TUN",
+    "band": 3
+  },
+  {
+    "name": "Turkmenistan",
+    "code": "TKM",
+    "band": 3
+  },
+  {
+    "name": "Tuvalu",
+    "code": "TUV",
+    "band": 1
+  },
+  {
+    "name": "Türkiye",
+    "code": "TUR",
+    "band": 4
+  },
+  {
+    "name": "Uganda",
+    "code": "UGA",
+    "band": 2
+  },
+  {
+    "name": "Ukraine",
+    "code": "UKR",
+    "band": 3
+  },
+  {
+    "name": "United Republic of Tanzania",
+    "code": "TZA",
+    "band": 2
+  },
+  {
+    "name": "Uzbekistan",
+    "code": "UZB",
+    "band": 3
+  },
+  {
+    "name": "Vanuatu",
+    "code": "VUT",
+    "band": 1
+  },
+  {
+    "name": "Venezuela (Bolivarian Republic of)",
+    "code": "VEN",
+    "band": 3
+  },
+  {
+    "name": "Viet Nam",
+    "code": "VNM",
+    "band": 4
+  },
+  {
+    "name": "Yemen",
+    "code": "YEM",
+    "band": 2
+  },
+  {
+    "name": "Zambia",
+    "code": "ZMB",
+    "band": 2
+  },
+  {
+    "name": "Zimbabwe",
+    "code": "ZWE",
+    "band": 2
+  }
+];
+</script><script>const StewardshipData = {"COK": {"sids": true, "landShare": 3.0171286745170568e-06, "referenceStrict": 0.0089107935027167, "referenceGini": 0.0088255721821023}, "ERI": {"sids": false, "landShare": 0.0015491958557258454, "referenceStrict": 0.0081647554143917, "referenceGini": 0.0080949958810479}, "GMB": {"sids": false, "landShare": 0.0001293785685858399, "referenceStrict": 0.0081434581550846, "referenceGini": 0.0080595004488694}, "STP": {"sids": true, "landShare": 1.227306579451408e-05, "referenceStrict": 0.0089109323417735, "referenceGini": 0.0088258035805303}, "BLZ": {"sids": true, "landShare": 0.0002916131570611409, "referenceStrict": 0.0089151224431425, "referenceGini": 0.008832787082812}, "SLE": {"sids": false, "landShare": 0.0009227811344457437, "referenceStrict": 0.0081553591935725, "referenceGini": 0.0080793355130159}, "NRU": {"sids": true, "landShare": 2.5568886783596906e-07, "referenceStrict": 0.0089107520811196, "referenceGini": 0.0088255031461072}, "GNB": {"sids": true, "landShare": 0.0003594985522412369, "referenceStrict": 0.0089161407240702, "referenceGini": 0.0088344842176915}, "SLB": {"sids": true, "landShare": 0.00035783657458122835, "referenceStrict": 0.0089161157944053, "referenceGini": 0.00883444266825}, "FSM": {"sids": true, "landShare": 8.949110474497021e-06, "referenceStrict": 0.0089108824824437, "referenceGini": 0.0088257204816473}, "DMA": {"sids": true, "landShare": 9.588332647838284e-06, "referenceStrict": 0.0089108920707763, "referenceGini": 0.0088257364622018}, "CAF": {"sids": false, "landShare": 0.007964452634239122, "referenceStrict": 0.0082609842660694, "referenceGini": 0.0082553773005107}, "BTN": {"sids": false, "landShare": 0.0004875986764724579, "referenceStrict": 0.0081488314567029, "referenceGini": 0.0080684559515665}, "VUT": {"sids": true, "landShare": 0.0001558423667078878, "referenceStrict": 0.0089130858812872, "referenceGini": 0.0088293928130531}, "KIR": {"sids": true, "landShare": 1.0355399261190747e-05, "referenceStrict": 0.0089109035767755, "referenceGini": 0.0088257556388671}, "TUV": {"sids": true, "landShare": 3.8353330113957235e-07, "referenceStrict": 0.0089107539987861, "referenceGini": 0.0088255063422181}, "PLW": {"sids": true, "landShare": 5.880844027794768e-06, "referenceStrict": 0.008910836458447, "referenceGini": 0.0088256437749861}, "MHL": {"sids": true, "landShare": 2.3011998344629053e-06, "referenceStrict": 0.0089107827637841, "referenceGini": 0.0088255542838814}, "KNA": {"sids": true, "landShare": 3.3239553211301723e-06, "referenceStrict": 0.0089107981051164, "referenceGini": 0.0088255798527684}, "TON": {"sids": true, "landShare": 9.204799347811826e-06, "referenceStrict": 0.0089108863177768, "referenceGini": 0.0088257268738691}, "PSE": {"sids": false, "landShare": 7.696235008574268e-05, "referenceStrict": 0.0081426719118071, "referenceGini": 0.0080581900434069}, "NIU": {"sids": true, "landShare": 3.3239553211301723e-06, "referenceStrict": 0.0089107981051164, "referenceGini": 0.0088255798527684}, "LSO": {"sids": false, "landShare": 0.00038813570575913875, "referenceStrict": 0.0081473395121422, "referenceGini": 0.0080659693772987}, "COM": {"sids": true, "landShare": 2.3791849421212048e-05, "referenceStrict": 0.0089111051235279, "referenceGini": 0.008826091550121}, "VCT": {"sids": true, "landShare": 4.9859329745467525e-06, "referenceStrict": 0.0089108230347812, "referenceGini": 0.0088256214022099}, "TLS": {"sids": true, "landShare": 0.0001901046753811948, "referenceStrict": 0.0089135998159173, "referenceGini": 0.0088302493707701}, "WSM": {"sids": true, "landShare": 3.554075302781024e-05, "referenceStrict": 0.008911281357082, "referenceGini": 0.0088263852727112}, "CPV": {"sids": true, "landShare": 5.152130744784667e-05, "referenceStrict": 0.0089115210653983, "referenceGini": 0.0088267847865717}, "LBR": {"sids": false, "landShare": 0.0012313976014124753, "referenceStrict": 0.008159988440577, "referenceGini": 0.0080870509246901}, "BDI": {"sids": false, "landShare": 0.0003283045100124782, "referenceStrict": 0.008146442044206, "referenceGini": 0.008064473597405}, "GRD": {"sids": true, "landShare": 4.34671080120549e-06, "referenceStrict": 0.0089108134464486, "referenceGini": 0.0088256054216555}, "SYC": {"sids": true, "landShare": 5.880844029992084e-06, "referenceStrict": 0.0078253007949062, "referenceGini": 0.0077514749770322}, "AGO": {"sids": false, "landShare": 0.015938365756701264, "referenceStrict": 0.0072950572993655, "referenceGini": 0.0073805563306182}, "MNE": {"sids": false, "landShare": 0.000171950765567921, "referenceStrict": 0.0070585610744985, "referenceGini": 0.0069863959558398}, "MMR": {"sids": false, "landShare": 0.008344022762834618, "referenceStrict": 0.0071811421544575, "referenceGini": 0.0071906977557716}, "BFA": {"sids": false, "landShare": 0.003497823751534568, "referenceStrict": 0.007108449169288, "referenceGini": 0.007069542780489}, "GNQ": {"sids": false, "landShare": 0.0003586036411945664, "referenceStrict": 0.0070613608676329, "referenceGini": 0.0069910622777305}, "SWZ": {"sids": false, "landShare": 0.00021989242882791463, "referenceStrict": 0.0070592801994474, "referenceGini": 0.0069875944974213}, "FJI": {"sids": true, "landShare": 0.00023357178340998978, "referenceStrict": 0.0078287161589969, "referenceGini": 0.0077571672505167}, "MNG": {"sids": false, "landShare": 0.019924552515447905, "referenceStrict": 0.0073548501007467, "referenceGini": 0.0074802109995869}, "NIC": {"sids": false, "landShare": 0.0015384799351612333, "referenceStrict": 0.0070790590120424, "referenceGini": 0.0070205591850797}, "NER": {"sids": false, "landShare": 0.016194054627427918, "referenceStrict": 0.0072988926324264, "referenceGini": 0.0073869485523864}, "BRB": {"sids": true, "landShare": 5.497310723258028e-06, "referenceStrict": 0.0078252950419066, "referenceGini": 0.0077514653886995}, "COG": {"sids": false, "landShare": 0.004365887467647905, "referenceStrict": 0.0071214701250297, "referenceGini": 0.0070912443733918}, "PRK": {"sids": false, "landShare": 0.001539374846207947, "referenceStrict": 0.0070790724357081, "referenceGini": 0.0070205815578559}, "LAO": {"sids": false, "landShare": 0.0029506495681812473, "referenceStrict": 0.0071002415565377, "referenceGini": 0.0070558634259051}, "TZA": {"sids": false, "landShare": 0.011324460084454618, "referenceStrict": 0.0072258487142818, "referenceGini": 0.007265208688812}, "YEM": {"sids": false, "landShare": 0.006749802653861249, "referenceStrict": 0.0071572288528229, "referenceGini": 0.0071508422530472}, "LCA": {"sids": true, "landShare": 7.79851055660782e-06, "referenceStrict": 0.0078253295599041, "referenceGini": 0.0077515229186954}, "COD": {"sids": false, "landShare": 0.028982972718961247, "referenceStrict": 0.0074907264037994, "referenceGini": 0.0077066715046747}, "SOM": {"sids": false, "landShare": 0.00802019280806126, "referenceStrict": 0.0071762847051359, "referenceGini": 0.0071826020069022}, "KGZ": {"sids": false, "landShare": 0.0024520562702612615, "referenceStrict": 0.0070927626570689, "referenceGini": 0.0070433985934573}, "MDA": {"sids": false, "landShare": 0.00042099172565459914, "referenceStrict": 0.0070622966888998, "referenceGini": 0.006992621979842}, "MDG": {"sids": false, "landShare": 0.0074379892494212795, "referenceStrict": 0.0071675516517563, "referenceGini": 0.0071680469179361}, "ETH": {"sids": false, "landShare": 0.014427229189381264, "referenceStrict": 0.0072723902508557, "referenceGini": 0.0073427779164351}, "ZWE": {"sids": false, "landShare": 0.004945661982014583, "referenceStrict": 0.0071301667427452, "referenceGini": 0.0071057387362511}, "TCD": {"sids": false, "landShare": 0.016098171300907932, "referenceStrict": 0.0072974543825286, "referenceGini": 0.0073845514692233}, "TJK": {"sids": false, "landShare": 0.0017743529184012625, "referenceStrict": 0.007082597106791, "referenceGini": 0.0070264560096608}, "BGD": {"sids": false, "landShare": 0.001661721970847944, "referenceStrict": 0.0070809076425777, "referenceGini": 0.0070236402359719}, "HTI": {"sids": true, "landShare": 0.00035233926386336244, "referenceStrict": 0.0078304976712037, "referenceGini": 0.007760136437528}, "GEO": {"sids": false, "landShare": 0.0008883909813412726, "referenceStrict": 0.0070693076777351, "referenceGini": 0.0070043069612341}, "HND": {"sids": false, "landShare": 0.0014304513872812643, "referenceStrict": 0.0070774385838242, "referenceGini": 0.0070178584713826}, "BEN": {"sids": false, "landShare": 0.0014415738531545787, "referenceStrict": 0.0070776054208123, "referenceGini": 0.0070181365330295}, "AFG": {"sids": false, "landShare": 0.00833839760768125, "referenceStrict": 0.0071810577771302, "referenceGini": 0.0071905571268927}, "ZMB": {"sids": false, "landShare": 0.009503827480447936, "referenceStrict": 0.0071985392252217, "referenceGini": 0.0072196928737119}, "MUS": {"sids": true, "landShare": 2.5530533743307535e-05, "referenceStrict": 0.0078255955402519, "referenceGini": 0.007751966219275}, "ALB": {"sids": false, "landShare": 0.00035029375289458153, "referenceStrict": 0.0070612362193084, "referenceGini": 0.0069908545305231}, "GIN": {"sids": false, "landShare": 0.003141393465741262, "referenceStrict": 0.0071031027150011, "referenceGini": 0.0070606320233442}, "SSD": {"sids": false, "landShare": 0.008078873403894599, "referenceStrict": 0.0071771649140734, "referenceGini": 0.007184069021798}, "MWI": {"sids": false, "landShare": 0.0012053173366012814, "referenceStrict": 0.007074061573064, "referenceGini": 0.0070122301201158}, "UGA": {"sids": false, "landShare": 0.0025635366179012587, "referenceStrict": 0.0070944348622835, "referenceGini": 0.0070461856021482}, "SDN": {"sids": false, "landShare": 0.023881340525801268, "referenceStrict": 0.007414201920902, "referenceGini": 0.0075791306998457}, "MKD": {"sids": false, "landShare": 0.00032242366598793604, "referenceStrict": 0.0070608181680048, "referenceGini": 0.0069901577783504}, "MRT": {"sids": false, "landShare": 0.013176925952861247, "referenceStrict": 0.0072536357023079, "referenceGini": 0.0073115203355222}, "SUR": {"sids": true, "landShare": 0.0020520004771899603, "referenceStrict": 0.0078559925894036, "referenceGini": 0.0078026279678613}, "MLI": {"sids": false, "landShare": 0.015599450158554583, "referenceStrict": 0.0072899735653933, "referenceGini": 0.0073720834406645}, "PNG": {"sids": true, "landShare": 0.005789563099849949, "referenceStrict": 0.0079120560287435, "referenceGini": 0.0078960670334277}, "NAM": {"sids": false, "landShare": 0.010525304519001279, "referenceStrict": 0.0072138613808, "referenceGini": 0.0072452297996756}, "KHM": {"sids": false, "landShare": 0.002256709973027955, "referenceStrict": 0.0070898324626104, "referenceGini": 0.0070385149360264}, "ARM": {"sids": false, "landShare": 0.0003605141484345926, "referenceStrict": 0.0070613895252415, "referenceGini": 0.0069911100404116}, "SYR": {"sids": false, "landShare": 0.0023476073665745665, "referenceStrict": 0.0070911959235136, "referenceGini": 0.007040787370865}, "RWA": {"sids": false, "landShare": 0.00031539222204128353, "referenceStrict": 0.0070607126963456, "referenceGini": 0.0069899819922517}, "MOZ": {"sids": false, "landShare": 0.010053430708074618, "referenceStrict": 0.0072067832736361, "referenceGini": 0.0072334329544025}, "NPL": {"sids": false, "landShare": 0.0018326499809279257, "referenceStrict": 0.0070834715627289, "referenceGini": 0.0070279134362239}, "MDV": {"sids": true, "landShare": 3.8097641766581675e-06, "referenceStrict": 0.0078252697287084, "referenceGini": 0.0077514232000358}, "TGO": {"sids": false, "landShare": 0.0006953458839412582, "referenceStrict": 0.0070664120012741, "referenceGini": 0.0069994808337992}, "ATG": {"sids": true, "landShare": 5.62515515667728e-06, "referenceStrict": 0.0078252969595731, "referenceGini": 0.0077514685848104}, "JAM": {"sids": true, "landShare": 0.00013845552350335498, "referenceStrict": 0.0078272894150983, "referenceGini": 0.0077547893440189}, "DJI": {"sids": false, "landShare": 0.00029634340117460267, "referenceStrict": 0.0070604269640326, "referenceGini": 0.00698950577173}, "SEN": {"sids": false, "landShare": 0.0024613889140479134, "referenceStrict": 0.0070929026467257, "referenceGini": 0.0070436319095518}, "KEN": {"sids": false, "landShare": 0.00742618025892372, "referenceStrict": 0.0060818388533581, "referenceGini": 0.0060935828952198}, "LKA": {"sids": false, "landShare": 0.0007908456771570557, "referenceStrict": 0.0059823088346316, "referenceGini": 0.0059276995306756}, "GUY": {"sids": true, "landShare": 0.0026993074082524446, "referenceStrict": 0.0067801665298288, "referenceGini": 0.0067446418431839}, "GTM": {"sids": false, "landShare": 0.0013699809693503914, "referenceStrict": 0.0059909958640145, "referenceGini": 0.0059421779129805}, "BWA": {"sids": false, "landShare": 0.00724532768532372, "referenceStrict": 0.0060791260647541, "referenceGini": 0.0060890615808799}, "CIV": {"sids": false, "landShare": 0.004065453044543692, "referenceStrict": 0.0060314279451424, "referenceGini": 0.0060095647148603}, "LBY": {"sids": false, "landShare": 0.022494739779850385, "referenceStrict": 0.006307867246172, "referenceGini": 0.0064702968832431}, "TTO": {"sids": true, "landShare": 6.558419533907005e-05, "referenceStrict": 0.0067406606816351, "referenceGini": 0.0066787987628611}, "DZA": {"sids": false, "landShare": 0.03044922054813703, "referenceStrict": 0.0064271844576963, "referenceGini": 0.0066691589024502}, "TKM": {"sids": false, "landShare": 0.0060077935510103805, "referenceStrict": 0.0060605630527394, "referenceGini": 0.006058123227522}, "BOL": {"sids": false, "landShare": 0.013849387682870393, "referenceStrict": 0.0061781869647173, "referenceGini": 0.0062541630808185}, "MAR": {"sids": false, "landShare": 0.00570569715025038, "referenceStrict": 0.006056031606728, "referenceGini": 0.006050570817503}, "AZE": {"sids": false, "landShare": 0.001056634258277007, "referenceStrict": 0.0059862956633484, "referenceGini": 0.0059343442452036}, "ECU": {"sids": false, "landShare": 0.003175144396670368, "referenceStrict": 0.0060180733154243, "referenceGini": 0.0059873069986636}, "BHS": {"sids": true, "landShare": 0.0001279722797991028, "referenceStrict": 0.006741596502902, "referenceGini": 0.0066803584649725}, "VEN": {"sids": false, "landShare": 0.011276518421190346, "referenceStrict": 0.0061395939257921, "referenceGini": 0.0061898413492765}, "LBN": {"sids": false, "landShare": 0.0001307848573770439, "referenceStrict": 0.0059724079223349, "referenceGini": 0.0059111980101812}, "TUN": {"sids": false, "landShare": 0.0019861911477970138, "referenceStrict": 0.0060002390166912, "referenceGini": 0.0059575831674417}, "GHA": {"sids": false, "landShare": 0.0029088827911436777, "referenceStrict": 0.0060140793913414, "referenceGini": 0.0059806504585254}, "DOM": {"sids": true, "landShare": 0.0006161848652523876, "referenceStrict": 0.0067489196916838, "referenceGini": 0.0066925637796088}, "SRB": {"sids": false, "landShare": 0.001075043856963697, "referenceStrict": 0.0059865718073287, "referenceGini": 0.0059348044851709}, "JOR": {"sids": false, "landShare": 0.001135181879363678, "referenceStrict": 0.0059874738776647, "referenceGini": 0.0059363079357308}, "UZB": {"sids": false, "landShare": 0.005633465044270365, "referenceStrict": 0.0060549481251383, "referenceGini": 0.0060487650148535}, "CMR": {"sids": false, "landShare": 0.00604333430404367, "referenceStrict": 0.0060610961640349, "referenceGini": 0.0060590117463478}, "BLR": {"sids": false, "landShare": 0.0025950247023303714, "referenceStrict": 0.0060093715200092, "referenceGini": 0.005972804006305}, "UKR": {"sids": false, "landShare": 0.007407306584930376, "referenceStrict": 0.0060815557482482, "referenceGini": 0.00609311105337}, "BIH": {"sids": false, "landShare": 0.0006545635090570573, "referenceStrict": 0.0059802646021101, "referenceGini": 0.0059242924764732}, "PRY": {"sids": false, "landShare": 0.005062793437230392, "referenceStrict": 0.0060463880510327, "referenceGini": 0.0060344982246775}, "SLV": {"sids": false, "landShare": 0.0002648936700703463, "referenceStrict": 0.0059744195545253, "referenceGini": 0.0059145507304986}, "GAB": {"sids": false, "landShare": 0.0032941675659970554, "referenceStrict": 0.0060198586629642, "referenceGini": 0.0059902825778967}, "PER": {"sids": false, "landShare": 0.01636408772645708, "referenceStrict": 0.0054017557177155, "referenceGini": 0.0055114039834427}, "NGA": {"sids": false, "landShare": 0.011643687639550405, "referenceStrict": 0.0053309497164119, "referenceGini": 0.0053933939812701}, "PHL": {"sids": false, "landShare": 0.003811937529217084, "referenceStrict": 0.0052134734647569, "referenceGini": 0.0051976002285117}, "ARG": {"sids": false, "landShare": 0.03498705878134372, "referenceStrict": 0.0056811002835388, "referenceGini": 0.0059769782598149}, "SGP": {"sids": true, "landShare": 9.179230459138826e-06, "referenceStrict": 0.0059256628595063, "referenceGini": 0.0058717620402735}, "THA": {"sids": false, "landShare": 0.006531444358257091, "referenceStrict": 0.0052542660671925, "referenceGini": 0.0052655878992377}, "COL": {"sids": false, "landShare": 0.014184340103517065, "referenceStrict": 0.0053690595033714, "referenceGini": 0.0054569102928693}, "TUR": {"sids": false, "landShare": 0.009839291278837075, "referenceStrict": 0.0053038837710012, "referenceGini": 0.0053482840722523}, "CUB": {"sids": true, "landShare": 0.001327025239065812, "referenceStrict": 0.0059454305496354, "referenceGini": 0.0059047081904887}, "KAZ": {"sids": false, "landShare": 0.03451416221493704, "referenceStrict": 0.0056740068350427, "referenceGini": 0.0059651558456547}, "EGY": {"sids": false, "landShare": 0.012726274318203742, "referenceStrict": 0.0053471885165917, "referenceGini": 0.0054204586482364}, "IRN": {"sids": false, "landShare": 0.020742759637637095, "referenceStrict": 0.0054674357963832, "referenceGini": 0.0056208707812223}, "MYS": {"sids": false, "landShare": 0.004200328923850405, "referenceStrict": 0.0052192993356764, "referenceGini": 0.0052073100133775}, "IDN": {"sids": false, "landShare": 0.02419526854552373, "referenceStrict": 0.0055192234300015, "referenceGini": 0.0057071835039193}, "VNM": {"sids": false, "landShare": 0.004007015353137076, "referenceStrict": 0.0052163996321157, "referenceGini": 0.0052024771741097}, "PAK": {"sids": false, "landShare": 0.009855271833257052, "referenceStrict": 0.0053041234793175, "referenceGini": 0.0053486835861128}, "IRQ": {"sids": false, "landShare": 0.005550110472410386, "referenceStrict": 0.0052395460589048, "referenceGini": 0.0052410545520916}, "ZAF": {"sids": false, "landShare": 0.015508680609443761, "referenceStrict": 0.0053889246109603, "referenceGini": 0.0054900188055174}, "BRA": {"sids": false, "landShare": 0.10685416889844625, "referenceStrict": 0.0056735712717546, "referenceGini": 0.0066994872147886}, "MEX": {"sids": false, "landShare": 0.024852319012379567, "referenceStrict": 0.0044435435234636, "referenceGini": 0.0046494409676368}, "IND": {"sids": false, "landShare": 0.03801057967767289, "referenceStrict": 0.004640917433443, "referenceGini": 0.0049783974842693}, "CHN": {"sids": false, "landShare": 0.1200230406518884, "referenceStrict": 0.0039714169368598, "referenceGini": 0.005148913612205}};
+</script><script>(function(root){
+const presets={pure:{sosac:0,tsac:0},ocean:{sosac:.03,tsac:0},strict:{sosac:.03,tsac:.015},gini:{sosac:.03,tsac:.025},boundary:{sosac:.03,tsac:.03}};
+function allocate(countries,data,weights,fund,key){
+ const p=presets[key];if(!p)throw Error('Unknown preset');
+ const denominator=countries.reduce((s,c)=>s+weights[c.band-1],0),sids=countries.filter(c=>data[c.code].sids).length;
+ if(!(denominator>0)||weights.some(w=>!Number.isFinite(w)||w<0)||!Number.isFinite(fund)||fund<=0)throw Error('Invalid allocation inputs');
+ const rows=countries.map(c=>{const d=data[c.code],pure=fund*weights[c.band-1]/denominator,equity=pure*(1-p.sosac-p.tsac),ocean=d.sids?fund*p.sosac/sids:0,land=fund*p.tsac*d.landShare;return {...c,pure,equity,ocean,land,total:equity+ocean+land};});
+ const bands=Array.from({length:6},(_,i)=>{const group=rows.filter(c=>c.band===i+1),sum=k=>group.reduce((s,c)=>s+c[k],0);return {band:i+1,n:group.length,total:sum('total'),mean:sum('total')/group.length,min:Math.min(...group.map(c=>c.total)),max:Math.max(...group.map(c=>c.total)),equity:sum('equity')/group.length,ocean:sum('ocean')/group.length,land:sum('land')/group.length};});
+ const compare=(a,b)=>Math.abs(a-b)<fund*1e-12?'equal':a>b?'strict':'violation';
+ return {rows,bands,preset:p,means:bands.slice(0,5).map((b,i)=>compare(b.mean,bands[i+1].mean)),ranges:bands.slice(0,5).map((b,i)=>compare(b.min,bands[i+1].max))};
+}
+const api={allocate,presets};if(typeof module!=='undefined')module.exports=api;else root.IUSAFStewardship=api;
+})(typeof window!=='undefined'?window:globalThis);
+</script><script>function renderStewardship(){
+ const key=$('scenario').value,m=IUSAFStewardship.allocate(IUSAFCountries,StewardshipData,weights,fund,key),p=m.preset;
+ $('pool-summary').textContent=`IUSAF ${Number(((1-p.sosac-p.tsac)*100).toFixed(1))}% · SOSAC ${p.sosac*100}% · TSAC ${Number((p.tsac*100).toFixed(1))}%`;
+ const baselineShape=weights.every((w,i)=>Math.abs(w-baseline[i])<1e-10);
+ $('preset-note').textContent=(key==='gini'?'Gini minimum is constrained by band-order preservation, not the unconstrained optimum. ':key==='boundary'?'The recorded 3% boundary preset is slightly beyond the Band 5–6 mean crossover. ':'')+'Preset percentages come from the recorded baseline scenarios; they are not recalibrated when weights change.'+(!baselineShape?' You are using exploratory equity weights.':'');
+ function checks(id,title,values){const issues=values.map((v,i)=>v==='strict'?null:`Bands ${i+1}–${i+2}: ${v==='equal'?'equality':'order not preserved'}`).filter(Boolean);$(id).textContent=title+': '+(issues.length?issues.join('; '):'strictly decreasing across all adjacent bands');$(id).className=issues.length?'check-warning':'';}
+ checks('mean-order','Band order (mean allocation per Party, as in the paper)',m.means);
+ const overlaps=m.ranges.map((v,i)=>v==='strict'?null:`${i+1}–${i+2}`).filter(Boolean);
+ $('country-order').textContent='Additional country-level information: '+(overlaps.length?'allocation ranges overlap or touch between bands '+overlaps.join(', ')+'. This is not the paper’s band-order test.':'adjacent country allocation ranges are separated.');
+ $('country-order').className='hint';
+ const max=Math.max(...m.bands.map(b=>b.mean))*1.2,W=900,H=290,left=60,bottom=245,plot=195,step=135,bar=85;
+ let svg=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg"><title>Mean combined allocation per Party by band, USD millions</title>`;
+ for(let i=0;i<=4;i++){const v=max*i/4,y=bottom-v/max*plot;svg+=`<line x1="${left}" x2="880" y1="${y}" y2="${y}" stroke="#dfe8ed"/><text x="52" y="${y+4}" text-anchor="end" font-size="12" fill="#526775">${Number((v/1e6).toFixed(2))}</text>`;}
+ m.bands.forEach((b,i)=>{const x=left+i*step+20;let y=bottom;for(const [k,c]of [['equity','#147D92'],['ocean','#8761a8'],['land','#D7AE64']]){const h=b[k]/max*plot;y-=h;svg+=`<rect x="${x}" y="${y}" width="${bar}" height="${h}" fill="${c}"/>`;}svg+=`<text x="${x+bar/2}" y="${y-9}" text-anchor="middle" font-size="16" fill="#193445">${(b.mean/1e6).toFixed(2)}</text><text x="${x+bar/2}" y="270" text-anchor="middle" font-size="14">Band ${b.band}</text>`;});$('combined-chart').innerHTML=svg+'</svg>';
+ $('combined-bands').innerHTML=m.bands.map(b=>`<tr><th>Band ${b.band}</th><td>${b.n}</td><td>${dollars(b.mean)}</td><td>${dollars(b.min)} – ${dollars(b.max)}</td><td>${dollars(b.total)}</td></tr>`).join('');
+ const q=$('combined-search').value.trim().toLowerCase(),list=m.rows.filter(c=>(c.name+' '+c.code).toLowerCase().includes(q));
+ $('combined-count').textContent=`${list.length} of 142 Parties · all components in USD`;
+ $('combined-countries').innerHTML=list.map(c=>`<tr><th>${escapeHTML(c.name)}${StewardshipData[c.code].sids?' · SIDS':''}</th><td>${c.band}</td><td>${dollars(c.equity)}</td><td>${dollars(c.ocean)}</td><td>${dollars(c.land)}</td><td><strong>${dollars(c.total)}</strong></td><td>${c.total-c.pure>=0?'+':''}${dollars(c.total-c.pure)}</td></tr>`).join('')||'<tr><td colspan="7">No matching Party.</td></tr>';
+ $('combined-total').textContent=`Full fund: ${dollars(fund)} = IUSAF ${dollars(fund*(1-p.sosac-p.tsac))} + SOSAC ${dollars(fund*p.sosac)} + TSAC ${dollars(fund*p.tsac)}. Rounded rows may differ slightly.`;
+}
+</script><script>'use strict';
+const {counts,baseline,weightsForRatio,allocateEquity}=IUSAF;
+const $=id=>document.getElementById(id);
+const dollars=v=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(v);
+const words={strict:'Strictly decreasing',equal:'Equal adjacent steps',violation:'Monotonicity violated'};
+const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const colors={strict:'#087586',equal:'#a46500',violation:'#c23c53'};
+const expandedBands=new Set();
+let fund=Number($('fund').value),weights=[...baseline],model=allocateEquity(weights,fund),shown=[...model.perParty],frame;
+$('weights').innerHTML=weights.map((w,i)=>`<label for="w${i}">Band ${i+1}<input id="w${i}" type="number" min="0" step="any" value="${w}" inputmode="decimal"></label>`).join('');
+function draw(values){
+ const width=$('chart').clientWidth,height=$('chart').clientHeight,left=48,right=8,top=38,bottom=48,plot=height-top-bottom,step=(width-left-right)/6;
+ // Fixed scale during normal slider use; expand only for large custom allocations.
+ const unit=4*fund/1e9,max=Math.max(12*fund/1e9,Math.ceil(Math.max(...model.perParty)/1e6/unit)*unit),y=v=>height-bottom-v/1e6/max*plot;
+ let s=`<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg"><title>Allocation per Party by band, USD millions</title>`;
+ for(let t=0;t<=4;t++){const value=max*t/4,yy=y(value*1e6);s+=`<line x1="${left}" x2="${width-right}" y1="${yy}" y2="${yy}" stroke="#dfe8ed"/><text x="${left-10}" y="${yy+4}" text-anchor="end" fill="#526775" font-size="12">${Number(value.toFixed(4))}</text>`;}
+ values.forEach((v,i)=>{let status='strict';const adjacent=[model.comparisons[i-1],model.comparisons[i]];if(adjacent.includes('violation'))status='violation';else if(adjacent.includes('equal'))status='equal';const x=left+i*step,yy=y(v),c=colors[status];s+=`<rect x="${x}" y="${yy}" width="${step}" height="${height-bottom-yy}" fill="${c}" opacity=".13"/><line x1="${x}" x2="${x+step}" y1="${yy}" y2="${yy}" stroke="${c}" stroke-width="4"/><text x="${x+step/2}" y="${yy-12}" text-anchor="middle" fill="#193445" font-size="${width<500?12:18}" font-weight="600">${(v/1e6).toFixed(2)}</text><text x="${x+step/2}" y="${height-27}" text-anchor="middle" fill="#193445" font-size="${width<500?11:14}">Band ${i+1}</text><text x="${x+step/2}" y="${height-9}" text-anchor="middle" fill="#526775" font-size="${width<500?10:12}">${counts[i]} ${counts[i]===1?'Party':'Parties'}</text>`;if(i<5)s+=`<line x1="${x+step}" x2="${x+step}" y1="${yy}" y2="${y(values[i+1])}" stroke="${colors[model.comparisons[i]]}" stroke-width="3" ${model.comparisons[i]==='violation'?'stroke-dasharray="5 3"':''}/>`;});
+ $('chart').innerHTML=s+'</svg>';
+ $('chart').setAttribute('aria-label',values.map((v,i)=>`Band ${i+1}: ${dollars(v)} per Party`).join('; '));
+}
+function render(animate=true){
+ cancelAnimationFrame(frame);model=allocateEquity(weights,fund);
+ $('fund-total').textContent=dollars(fund);
+ $('ratio').textContent=Number.isNaN(model.ratio)?'Undefined (0 / 0)':!Number.isFinite(model.ratio)?'∞ : 1':`${Number(model.ratio.toFixed(3))} : 1`;
+ $('status').textContent=words[model.status];
+ $('comparisons').innerHTML=model.comparisons.map((c,i)=>`<div class="comparison ${c}"><b>${i+1} ${c==='strict'?'>':c==='equal'?'=':'<'} ${i+2}</b>${c==='strict'?'Decrease':c==='equal'?'Equal':'Violation'}</div>`).join('');
+ $('rows').innerHTML=weights.map((w,i)=>{
+ const band=i+1,open=expandedBands.has(band);
+ const header=`<tr class="band-total"><th scope="row"><button class="band-toggle" data-band="${band}" aria-expanded="${open}">${open?'▾':'▸'} Band ${band} · ${open?'Hide':'View'} countries</button></th><td>${counts[i]}</td><td>${Number(w.toPrecision(8))}</td><td>${dollars(model.perParty[i])}</td><td>${dollars(model.totals[i])}</td></tr>`;
+ const children=IUSAFCountries.filter(c=>c.band===band).map(c=>`<tr class="country-detail" data-country-band="${band}" ${open?'':'hidden'}><th scope="row">${escapeHTML(c.name)}</th><td>1</td><td>${Number(w.toPrecision(8))}</td><td>${dollars(model.perParty[i])}</td><td>${dollars(model.perParty[i])}</td></tr>`).join('');
+ return header+children;
+ }).join('');
+ renderCountries();renderStewardship();
+ if(!animate||matchMedia('(prefers-reduced-motion: reduce)').matches){shown=[...model.perParty];draw(shown);return;}
+ const from=[...shown],start=performance.now();function tick(now){const t=Math.min(1,(now-start)/320),e=1-Math.pow(1-t,3);shown=from.map((v,i)=>v+(model.perParty[i]-v)*e);draw(shown);if(t<1)frame=requestAnimationFrame(tick);}frame=requestAnimationFrame(tick);
+}
+function clearError(){document.body.classList.remove('invalid');$('error').textContent='';for(let i=0;i<6;i++)$('w'+i).setAttribute('aria-invalid','false');}
+function syncInputs(){weights.forEach((w,i)=>$('w'+i).value=Number(w.toPrecision(12)));}
+function applyRatio(r,source){
+ clearError();$('ratio-error').textContent='';$('ratio-input').setAttribute('aria-invalid','false');
+ weights=weightsForRatio(r);syncInputs();$('steepness').value=r;
+ if(source!=='Typed')$('ratio-input').value=r;
+ $('target').textContent=`${r} : 1`;$('mode').textContent=r===3.75?'Paper baseline':'Exploratory';render();
+}
+$('fund').addEventListener('change',()=>{fund=Number($('fund').value);render(false);});
+$('steepness').addEventListener('input',()=>applyRatio(+$('steepness').value,'Slider'));
+$('ratio-input').addEventListener('input',()=>{
+ const r=$('ratio-input').valueAsNumber;
+ if(!Number.isFinite(r)||r<1||r>10||Math.abs(r*100-Math.round(r*100))>1e-8){$('ratio-error').textContent='Enter 1 to 10, with up to two decimal places. The last valid allocation is retained.';$('ratio-input').setAttribute('aria-invalid','true');return;}
+ applyRatio(r,'Typed');
+});
+for(let i=0;i<6;i++)$('w'+i).addEventListener('input',()=>{clearError();const proposed=counts.map((_,j)=>$('w'+j).valueAsNumber);try{allocateEquity(proposed);}catch(error){cancelAnimationFrame(frame);document.body.classList.add('invalid');$('error').textContent=proposed.every(w=>w===0)?'Enter at least one weight above zero. Showing last valid result.':'Use finite weights of zero or above. Showing last valid result.';proposed.forEach((w,j)=>$('w'+j).setAttribute('aria-invalid',String(!Number.isFinite(w)||w<0||proposed.every(v=>v===0))));return;}weights=proposed;const actual=proposed[5]>0?proposed[0]/proposed[5]:NaN;$('ratio-input').value=Number.isFinite(actual)&&actual>=1&&actual<=10?Number(actual.toFixed(8)):'';$('ratio-error').textContent='';$('ratio-input').setAttribute('aria-invalid','false');$('mode').textContent='Manual';$('target').textContent='Move to reshape';render();});
+$('reset').addEventListener('click',()=>{$('ratio-input').value=3.75;$('ratio-error').textContent='';$('ratio-input').setAttribute('aria-invalid','false');clearError();weights=[...baseline];syncInputs();$('steepness').value=3.75;$('target').textContent='3.75 : 1';$('mode').textContent='Paper baseline';render();});
+$('fullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch{$('fullscreen').textContent='Use browser full screen';}});
+document.addEventListener('fullscreenchange',()=>{$('fullscreen').textContent=document.fullscreenElement?'Exit full screen':'Present full screen';});
+new ResizeObserver(()=>draw(shown)).observe($('chart'));render(false);
+
+function renderCountries(){
+ const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[’']/g,'');
+ const query=normalize($('country-search').value.trim());
+ const list=IUSAFCountries.filter(c=>normalize(c.name+' '+c.code).includes(query));
+ $('country-count').textContent=`${list.length} of 142 Parties${document.body.classList.contains('invalid')?' · Last valid allocation':''}`;
+ $('country-rows').innerHTML=list.length?list.map(c=>`<tr><th scope="row">${escapeHTML(c.name)} <span class="country-code">${c.code}</span></th><td>${c.band}</td><td>${dollars(model.perParty[c.band-1])}</td></tr>`).join(''):'<tr><td colspan="3">No matching Party in this 142-Party scenario. Try part of its name or its three-letter code.</td></tr>';
+}
+$('country-search').addEventListener('input',renderCountries);
+
+$('rows').addEventListener('click',event=>{
+ const button=event.target.closest('.band-toggle');if(!button)return;
+ const band=Number(button.dataset.band);if(expandedBands.has(band))expandedBands.delete(band);else expandedBands.add(band);
+ const open=expandedBands.has(band);button.setAttribute('aria-expanded',String(open));button.textContent=`${open?'▾':'▸'} Band ${band} · ${open?'Hide':'View'} countries`;
+ document.querySelectorAll(`[data-country-band="${band}"]`).forEach(row=>row.hidden=!open);
+});
+
+$("scenario").addEventListener("change",()=>renderStewardship());
+$("combined-search").addEventListener("input",()=>renderStewardship());
+$("stewardship-reset").addEventListener("click",()=>{$("scenario").value="strict";$("reset").click();});
+</script></body></html>
