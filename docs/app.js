@@ -73,4 +73,4 @@ $('rows').addEventListener('click',event=>{
 
 $("scenario").addEventListener("change",()=>renderStewardship());
 $("combined-search").addEventListener("input",()=>renderStewardship());
-$("stewardship-reset").addEventListener("click",()=>{$("scenario").value="strict";$("reset").click();});
+$("stewardship-reset").addEventListener("click",()=>{$("scenario").value="pure";$("reset").click();});
